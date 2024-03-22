@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-form": "^0.0.3",
     "@vercel/postgres": "^0.7.2",
     "next": "14.1.4",
     "react": "^18",
