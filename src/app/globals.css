@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btngo {
+    
+        background-color: #44a548; 
+        border: none;  
+        color: white;  
+        padding: 15px 32px;  
+        text-align: center;  
+        text-decoration: none;  
+        display: inline-block;  
+        font-size: 16px;  
+        margin: 4px 2px;  
+        cursor: pointer;  
+        border-radius: 4px;
+}
+.btngo:hover {
+    background-color: #347234;  
+}
+
+
+    
+.btncreate {
+    background-color: #252558;  
+    border: none;  
+    color: white;  
+    padding: 15px 32px;  
+    text-align: center;  
+    text-decoration: none;  
+    display: inline-block;  
+    font-size: 16px;  
+    margin: 4px 2px;  
+    cursor: pointer;  
+    border-radius: 4px;  
+
+}
+
+.btncreate:hover {
+    background-color: #385993;  
+     
+}
+
+.btndelete {
+    background-color: #e60c0c;
+    border: none;  
+    color: white;  
+    padding: 15px 32px;  
+    text-align: center;  
+    text-decoration: none;  
+    display: inline-block;  
+    font-size: 16px;  
+    margin: 4px 2px;  
+    cursor: pointer;  
+    border-radius: 4px;  
+     
+
+}
+.btndelete:hover {
+    background-color: #ba1919;  
+     
+     
+}
