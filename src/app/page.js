@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
       height={100}
       width={100}
       alt="learn to code" />
+
+      <UserButton />
 
       <h1>LEARN 2 CODE</h1>
       <p>Hello World!</p>
