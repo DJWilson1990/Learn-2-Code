@@ -1,6 +1,6 @@
 //create and edit profile form page.
 import { currentUser, auth } from "@clerk/nextjs";
-import ProfileForm from "../components/ProfileForm";
+// import ProfileForm from "../components/ProfileForm";
 import { getProfile, saveProfile } from "@/utils/utils";
 // import { redirect } from "next/navigation";
 
@@ -28,12 +28,12 @@ export default async function Page() {
 
   return (
     <div>
-      <ProfileForm
+      {/* <ProfileForm
         action={updateProfile}
         user_id={userId}
         email={emailAddress}
         new_profile={newProfile}
-      />
+      /> */}
     </div>
   );
 }

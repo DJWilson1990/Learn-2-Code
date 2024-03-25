@@ -2,7 +2,7 @@
 
 import { introLessons } from "@/resources/intro/introLessons";
 import { useEffect, useState } from "react";
-import Input from "@/app/components/Input";
+import Input from "@/components/Input";
 
 export default function Course(courseId) {
   const [currentStep, setCurrentStep] = useState(0);
