@@ -6,11 +6,11 @@ import "./RadixForm.css";
 import { updateProfile } from "@/utils/actions";
 
 export default function ProfileForm({ action, user_id, email, new_profile }) {
-  async function submitForm(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    action(formData);
-  }
+  // async function submitForm(event) {
+  //   event.preventDefault();
+  //   const formData = new FormData(event.target);
+  //   action(formData);
+  // }
 
   console.log(user_id, email, new_profile);
   return (
