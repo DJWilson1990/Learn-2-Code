@@ -9,18 +9,23 @@ export default function Home() {
     // redirect("/profile");
   }
   return (
-    <div>
-      <Image
-        src="/learn-coding-online.jpg"
-        height={100}
-        width={100}
-        alt="learn to code"
-      />
-
-      <UserButton />
-
-      <h1>LEARN 2 CODE</h1>
-      <p>Hello World!</p>
+    <div className="homecontainer">
+      <div>
+        <div className="header">
+          <img src="./learncodelogo.png"></img>
+        </div>
+        <div className="flex-container">
+          <div className="flex-items">
+            <h2>
+              'Welcome to Learn2Code! Our website is designed with simplicity in
+              mind to make learning to code easy and enjoyable for beginners..
+            </h2>
+          </div>
+          <div className="flex-items">
+            <h2>Log In or Sign Up buttons</h2>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Button from "./button/page.js"
-import { ClerkProvider, UserButton } from '@clerk/nextjs'
-import Link from 'next/link';
-import Home from "./page";
+
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,19 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
-          <nav>
-          <Link href="/sign-up">Sign-Up</Link>  |  <Link href="/sign-in">Sign-In</Link>
-
-          <br />
-          <Link className="btnhome" href="/">Home</Link> 
-          </nav>
-          <UserButton />
-          <Home />
-          {children}
-          <Button />
-     
-        </body>
+        <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
   );

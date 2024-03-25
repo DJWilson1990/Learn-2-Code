@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #8dd7bfff;
+}
+.homecontainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+  align-content: center;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  align-content: center;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  order: 0;
+  width: 60%;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  text-align: center;
+  align-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  width: 60%;
+}
 .btngo {
   background-color: #44a548;
   border: none;
