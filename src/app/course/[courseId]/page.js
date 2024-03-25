@@ -7,6 +7,7 @@ import Input from "@/components/Input";
 export default function Course(courseId) {
   const [currentStep, setCurrentStep] = useState(0);
   const lesson = introLessons[currentStep];
+  // const contentHTML = renderToString(lesson.content);
   let element;
   if (lesson.userInteraction === true) {
     element = {
@@ -33,6 +34,7 @@ export default function Course(courseId) {
   return (
     <div>
       <h1>{`Step ${currentStep}`}</h1>
+      {/* {lesson.contentHTML} */}
       {lesson.content}
       {lesson.userInteraction === true ? <Input element={element} /> : null}
       {lesson.userInteraction === true ? (

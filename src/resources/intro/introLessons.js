@@ -51,7 +51,7 @@ export const introLessons = [
     subject: "p tags",
     content: `Awesome! We have a title and a sub heading. What’s next I hear you ask! Well, let’s put some more text content on the page.
           We don’t always want to use header tags for text. For a majority of the page’s text content, we will use <p> tags.
-          The <p> element represents paragraph. Unlike <h1> tags, you can freely use as many <p> tags on a page as you require. 
+          The <p> element represents paragraph. Unlike <h1> tags, you can freely use as many <p> tags on a page as you require.
           Let’s give it a go! Imagine you have your title, sub heading and now want to add a short description. Use the <p> tag to add a short description of your choice. Don’t forget to use the closing tag at the end of the description.
           e.g <p> This is a page about how wonderful the world is! </p>
           `,
