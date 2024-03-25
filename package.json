@@ -9,13 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@radix-ui/react-form": "^0.0.3",
     "@clerk/nextjs": "^4.29.9",
+    "@radix-ui/react-form": "^0.0.3",
     "@vercel/postgres": "^0.7.2",
+    "codemirror": "^5.65.16",
     "install": "^0.13.0",
     "next": "14.1.4",
     "npm": "^10.5.0",
     "react": "^18",
+    "react-codemirror2": "^7.3.0",
     "react-dom": "^18"
   },
   "devDependencies": {
