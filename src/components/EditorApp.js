@@ -26,7 +26,7 @@ function EditorApp() {
 
   return (
     <>
-      <div className={styles.paneTopPane}>
+      <div className={styles.topPane}>
         <Editor
           language="xml"
           displayName="HTML"
