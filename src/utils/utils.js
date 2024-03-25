@@ -9,6 +9,7 @@ export async function saveProfile(formData) {
   const lastName = formData.get("last_name");
   const email = formData.get("email");
   const language = formData.get("language");
+  let queryString = "";
   if (newProfile === "true") {
     queryString = `INSERT INTO user_details (id, first_name, last_name, email, language) VALUES ('${id}', '${firstName}', '${lastName}', '${email}', '${language}')`;
   } else {

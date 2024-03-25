@@ -2,87 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .btngo {
-    
-        background-color: #44a548; 
-        border: none;  
-        color: white;  
-        padding: 15px 32px;  
-        text-align: center;  
-        text-decoration: none;  
-        display: inline-block;  
-        font-size: 16px;  
-        margin: 4px 2px;  
-        cursor: pointer;  
-        border-radius: 4px;
+  background-color: #44a548;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .btngo:hover {
-    background-color: #347234;  
+  background-color: #347234;
 }
 
-
-
-    
 .btncreate {
-    background-color: #252558;  
-    border: none;  
-    color: white;  
-    padding: 15px 32px;  
-    text-align: center;  
-    text-decoration: none;  
-    display: inline-block;  
-    font-size: 16px;  
-    margin: 4px 2px;  
-    cursor: pointer;  
-    border-radius: 4px;  
-
+  background-color: #252558;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .btncreate:hover {
-    background-color: #385993;  
-     
+  background-color: #385993;
 }
 
 .btndelete {
-    background-color: #e60c0c;
-    border: none;  
-    color: white;  
-    padding: 15px 32px;  
-    text-align: center;  
-    text-decoration: none;  
-    display: inline-block;  
-    font-size: 16px;  
-    margin: 4px 2px;  
-    cursor: pointer;  
-    border-radius: 4px;  
-     
-
+  background-color: #e60c0c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .btndelete:hover {
-    background-color: #ba1919;  
-     
-     
+  background-color: #ba1919;
 }
 
 .btnhome {
-    background-color: #29c8bd;
-    border: none;  
-    color: white;  
-    padding: 15px 32px;  
-    text-align: center;  
-    text-decoration: none;  
-    display: inline-block;  
-    font-size: 16px;  
-    margin: 4px 2px;  
-    cursor: pointer;  
-    border-radius: 4px; 
-
+  background-color: #29c8bd;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
-
 
 .btnhome:hover {
-    background-color: #227e7e;
-
+  background-color: #227e7e;
 }
 
+/* sstyling for course output */
+#output h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+#output h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+#output h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+#output h4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+#output h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+#output h6 {
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+#output p {
+  font-size: 1rem;
+}
+
+/*  */

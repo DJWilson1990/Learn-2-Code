@@ -54,7 +54,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
         </Form.Control>
       </Form.Field>
 
-      <Form.Field className="FormField" name="gender">
+      <Form.Field className="FormField" name="username">
         <div
           style={{
             display: "flex",
@@ -62,58 +62,10 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
             justifyContent: "space-between",
           }}
         >
-          <Form.Label className="FormLabel">Gender</Form.Label>
+          <Form.Label className="FormLabel">Username</Form.Label>
         </div>
         <Form.Control asChild>
           <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field>
-
-      <Form.Field className="FormField" name="location">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">Location</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field>
-
-      <Form.Field className="FormField" name="occupation">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">Occupation</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field>
-
-      <Form.Field className="FormField" name="about">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">About</Form.Label>
-          <Form.Message className="FormMessage" match="valueMissing">
-            About you...
-          </Form.Message>
-        </div>
-        <Form.Control asChild>
-          <textarea className="Textarea" />
         </Form.Control>
       </Form.Field>
 
