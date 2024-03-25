@@ -1,8 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import "../globals.css";
-
+import "../app/globals.css"
 export default function Input({ element, resetInput }) {
   const [userInput, setUserInput] = useState("");
   const [validInput, setValidInput] = useState(false);
