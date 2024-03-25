@@ -1,8 +1,10 @@
+import { getProfile } from "@/utils/utils";
+
 export default async function ViewProfile({ profile }) {
   return (
     <div>
-      <p>{profile.first_name}</p>
-      <p>{profile.last_name}</p>
+      <p>{profile.firstName}</p>
+      <p>{profile.lastName}</p>
     </div>
   );
 }
