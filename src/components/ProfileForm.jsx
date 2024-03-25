@@ -18,6 +18,22 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
       <input type="hidden" name="user_id" value={user_id} />
       <input type="hidden" name="email" value={email} />
       <input type="hidden" name="new_profile" value={true} />
+
+      <Form.Field className="FormField" name="username">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "baseline",
+            justifyContent: "space-between",
+          }}
+        >
+          <Form.Label className="FormLabel">Username</Form.Label>
+        </div>
+        <Form.Control asChild>
+          <input className="Input" type="text" />
+        </Form.Control>
+      </Form.Field>
+
       <Form.Field className="FormField" name="first_name">
         <div
           style={{
@@ -54,7 +70,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
         </Form.Control>
       </Form.Field>
 
-      <Form.Field className="FormField" name="username">
+      <Form.Field className="FormField" name="language">
         <div
           style={{
             display: "flex",
@@ -62,7 +78,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
             justifyContent: "space-between",
           }}
         >
-          <Form.Label className="FormLabel">Username</Form.Label>
+          <Form.Label className="FormLabel">Language</Form.Label>
         </div>
         <Form.Control asChild>
           <input className="Input" type="text" />

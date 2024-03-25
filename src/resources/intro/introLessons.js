@@ -4,8 +4,11 @@ export const introLessons = [
     title: "Lesson intro",
     subject: "HTML intro",
     content: `Welcome to Learn 2 Code. Here you will be able to start your programming career with the basics and progress to a fully-fledged web developer.
+
           To start our journey, we are going to look at HTML. We will look at HTML elements, how they are used and how a typical HTML page is structured.
+
           HTML (HyperText Markup Language) tells web browsers how to structure the web pages you visit. It consists of elements which are used to enclose, wrap or mark up different parts of content, making it appear in a certain way.
+          
           Ok, so let’s start building a basic page.`,
     userInteraction: false,
   },
