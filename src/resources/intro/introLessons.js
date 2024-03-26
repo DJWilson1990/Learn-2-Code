@@ -4,8 +4,11 @@ export const introLessons = [
     title: "Lesson intro",
     subject: "HTML intro",
     content: `Welcome to Learn 2 Code. Here you will be able to start your programming career with the basics and progress to a fully-fledged web developer.
+
           To start our journey, we are going to look at HTML. We will look at HTML elements, how they are used and how a typical HTML page is structured.
+
           HTML (HyperText Markup Language) tells web browsers how to structure the web pages you visit. It consists of elements which are used to enclose, wrap or mark up different parts of content, making it appear in a certain way.
+          
           Ok, so let’s start building a basic page.`,
     userInteraction: false,
   },
@@ -48,7 +51,7 @@ export const introLessons = [
     subject: "p tags",
     content: `Awesome! We have a title and a sub heading. What’s next I hear you ask! Well, let’s put some more text content on the page.
           We don’t always want to use header tags for text. For a majority of the page’s text content, we will use <p> tags.
-          The <p> element represents paragraph. Unlike <h1> tags, you can freely use as many <p> tags on a page as you require. 
+          The <p> element represents paragraph. Unlike <h1> tags, you can freely use as many <p> tags on a page as you require.
           Let’s give it a go! Imagine you have your title, sub heading and now want to add a short description. Use the <p> tag to add a short description of your choice. Don’t forget to use the closing tag at the end of the description.
           e.g <p> This is a page about how wonderful the world is! </p>
           `,

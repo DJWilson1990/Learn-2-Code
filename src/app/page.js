@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs";
 // import { redirect } from "next/navigation";
 
@@ -10,6 +10,8 @@ export default function Home() {
   }
   return (
     <div className="homecontainer">
+      <SignInButton />
+      <UserButton />
       <div>
         <div className="header">
           <img
