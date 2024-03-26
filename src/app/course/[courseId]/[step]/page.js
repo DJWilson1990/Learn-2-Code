@@ -51,12 +51,12 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col mx-auto w-96 items-center m-10">
       {/* <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p> */}
-      <p>{lesson.content}</p>
+      <p className="text-center">{lesson.content}</p>
       {lesson.userInteraction === true ? <Input element={element} /> : null}
       {lesson.userInteraction === true ? (
-        <div id="output" className="border"></div>
+        <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
       ) : null}
 
       {step < numberOfSteps ? (

@@ -56,7 +56,7 @@ export default function Input({ element, resetInput }) {
         value={userInput}
         className={`${
           validInput === true ? "text-green-600" : "text-red-600"
-        } border`}
+        } border w-96 m-2`}
         e
       ></textarea>
     </div>
