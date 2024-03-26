@@ -26,7 +26,7 @@ body {
   margin: auto;
   color: #00a5e3;
 }
-flex-container {
+flex-container-home {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,6 +59,13 @@ flex-container {
   margin: auto;
   width: 80%;
   height: 100%;
+  font-size: 25px;
+}
+
+.icon {
+  justify-content: center;
+  text-align: center;
+  align-content: center;
 }
 .btngo {
   background-color: #44a548;
@@ -73,6 +80,7 @@ flex-container {
   cursor: pointer;
   border-radius: 4px;
 }
+
 .btngo:hover {
   background-color: #347234;
 }

@@ -19,7 +19,7 @@ export default function Home() {
             alt="learn2code logo with keyboard"
           ></img>
         </div>
-        <div className="flex-container">
+        <div className="flex-container-home">
           <div className="flex-items">
             <h2>
               Welcome to Learn2Code! Our website is designed with simplicity in
