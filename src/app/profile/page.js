@@ -2,6 +2,7 @@
 import { currentUser, auth } from "@clerk/nextjs";
 import ProfileForm from "@/components/ProfileForm";
 import { getProfile, saveProfile } from "@/utils/utils";
+import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "Complete registration",
@@ -23,12 +24,13 @@ export default async function Page() {
     }
   }
 
-  async function updateProfile(formData) {
-    "use server";
-
-    saveProfile({ formData, newProfile });
-    // redirect("/profile");
-  }
+  // async function updateProfile(formData) {
+  //   "use server";
+  //   const userId = formData.get("user_id");
+  //   console.log("test" + userId);
+  //   await saveProfile({ formData, newProfile });
+  //   redirect(`/profile/${userId}`);
+  // }
 
   return (
     <div className="flex flex-col items-center">
@@ -36,7 +38,7 @@ export default async function Page() {
         Complete profile registration
       </h1>
       <ProfileForm
-        action={updateProfile}
+        // action={updateProfile}
         user_id={userId}
         email={emailAddress}
         new_profile={newProfile}

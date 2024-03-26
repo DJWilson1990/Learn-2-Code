@@ -50,6 +50,11 @@ export default async function Page({ params }) {
     redirect(`/course/${course}/${next}`);
   }
 
+  async function playground() {
+    "use server";
+    redirect("/code-editor");
+  }
+
   return (
     <div className="flex flex-col mx-auto w-96 items-center m-10">
       {/* <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p> */}
@@ -59,9 +64,14 @@ export default async function Page({ params }) {
         <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
       ) : null}
 
+      {/* {step < numberOfSteps ? (
+        <NextButton action={nextStep} caption="Next Step" />
+      ) : null} */}
       {step < numberOfSteps ? (
         <NextButton action={nextStep} caption="Next Step" />
-      ) : null}
+      ) : (
+        <NextButton action={playground} caption="Go to code playground" />
+      )}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import * as Form from "@radix-ui/react-form";
 import "./RadixForm.css";
 import { updateProfile } from "@/utils/actions";
 
-export default function ProfileForm({ action, user_id, email, new_profile }) {
+export default function ProfileForm({ user_id, email, new_profile }) {
   // async function submitForm(event) {
   //   event.preventDefault();
   //   const formData = new FormData(event.target);
@@ -19,7 +19,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
       <input type="hidden" name="email" value={email} />
       <input type="hidden" name="new_profile" value={true} />
 
-      <Form.Field className="FormField" name="username">
+      <Form.Field className="FormField" name="user_name">
         <div
           style={{
             display: "flex",
