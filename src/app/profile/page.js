@@ -1,7 +1,7 @@
 //create and edit profile form page.
 import { currentUser, auth } from "@clerk/nextjs";
 import ProfileForm from "@/components/ProfileForm";
-import { getProfile, saveProfile } from "@/utils/utils";
+import { getLanguages, getProfile, saveProfile } from "@/utils/utils";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -15,6 +15,9 @@ export default async function Page() {
 
   const { userId } = auth();
   console.log(userId);
+
+  const languages = await getLanguages();
+
   if (userId) {
     const user = await currentUser();
     emailAddress = user.emailAddresses[0].emailAddress;
@@ -33,6 +36,7 @@ export default async function Page() {
         user_id={userId}
         email={emailAddress}
         new_profile={newProfile}
+        languages={languages}
       />
     </div>
   );
