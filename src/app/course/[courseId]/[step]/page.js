@@ -7,8 +7,6 @@ import { setProgress } from "@/utils/utils";
 import { auth } from "@clerk/nextjs";
 
 export default async function Page({ params }) {
-  console.log(params);
-
   const { userId } = auth();
   const course = params.courseId;
   const step = params.step;
@@ -23,6 +21,8 @@ export default async function Page({ params }) {
 
   const numberOfSteps = courseData.length;
   const lesson = courseData[step - 1];
+  const lessonContent = lesson.content.split("\n");
+
   let element;
   if (lesson.userInteraction === true) {
     element = {
@@ -61,9 +61,14 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className="flex flex-col mx-auto w-96 items-center m-10">
+    <div className="flex flex-col mx-auto w-96 m-10">
       {/* <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p> */}
-      <p className="text-center">{lesson.content}</p>
+      {lessonContent.map((text) => (
+        <p key={text} className="mb-2">
+          {text}
+        </p>
+      ))}
+      {/* <p className="text-center">{lesson.content}</p> */}
       {lesson.userInteraction === true ? <Input element={element} /> : null}
       {lesson.userInteraction === true ? (
         <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
