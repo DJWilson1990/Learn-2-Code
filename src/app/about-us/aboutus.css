@@ -18,7 +18,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: normal;
+  align-items: stretch;
   align-content: space-between;
 }
 
@@ -30,6 +30,7 @@ body {
   align-self: auto;
   order: 0;
   width: 20%;
+  text-align: center;
 }
 
 .flex-items:nth-child(2) {
@@ -40,6 +41,7 @@ body {
   align-self: auto;
   order: 0;
   width: 20%;
+  text-align: center;
 }
 
 .flex-items:nth-child(3) {
@@ -50,6 +52,7 @@ body {
   align-self: auto;
   order: 0;
   width: 20%;
+  text-align: center;
 }
 
 .flex-items:nth-child(4) {
@@ -60,4 +63,5 @@ body {
   align-self: auto;
   order: 0;
   width: 20%;
+  text-align: center;
 }

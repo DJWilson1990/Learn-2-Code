@@ -7,30 +7,32 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: comfortaa;
   background-color: #8dd7bfff;
 }
 .homecontainer {
   display: flex;
-  justify-content: center;
   align-content: center;
-  justify-content: center;
-  align-content: center;
+  height: 100%;
 }
 .header {
+  display: flex;
+  background-color: #8dd7bfff;
   padding: 30px;
   text-align: center;
-  font-size: 35px;
+  font-size: 60px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: #00a5e3;
 }
 flex-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  align-content: space-between;
+  margin: auto;
 }
-
 .flex-items:nth-child(1) {
   display: block;
   align-content: center;
@@ -39,18 +41,24 @@ flex-container {
   flex-shrink: 1;
   flex-basis: auto;
   order: 0;
-  width: 60%;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 25px;
 }
 
 .flex-items:nth-child(2) {
   display: block;
+  justify-content: center;
   text-align: center;
   align-content: center;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
-
-  width: 60%;
+  margin: auto;
+  width: 80%;
+  height: 100%;
 }
 .btngo {
   background-color: #44a548;
