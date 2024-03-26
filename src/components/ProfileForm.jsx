@@ -70,7 +70,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
         </Form.Control>
       </Form.Field>
 
-      <Form.Field className="FormField" name="language">
+      {/* <Form.Field className="FormField" name="language">
         <div
           style={{
             display: "flex",
@@ -83,7 +83,15 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
         <Form.Control asChild>
           <input className="Input" type="text" />
         </Form.Control>
-      </Form.Field>
+      </Form.Field> */}
+
+      <label for="language">Choose a language:</label>
+      <select name="language" id="language">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Italian">Italian</option>
+      </select>
 
       <Form.Submit asChild>
         <button className="Button" style={{ marginTop: 10 }}>

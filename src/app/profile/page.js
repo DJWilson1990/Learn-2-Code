@@ -3,6 +3,11 @@ import { currentUser, auth } from "@clerk/nextjs";
 import ProfileForm from "@/components/ProfileForm";
 import { getProfile, saveProfile } from "@/utils/utils";
 
+export const metadata = {
+  title: "Complete registration",
+  description: "Continue to set up user account",
+};
+
 export default async function Page() {
   let newProfile = true;
   let emailAddress;
@@ -26,7 +31,10 @@ export default async function Page() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
+      <h1 className="m-10 font-bold text-lg text-white">
+        Complete profile registration
+      </h1>
       <ProfileForm
         action={updateProfile}
         user_id={userId}
