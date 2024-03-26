@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs";
-// import { redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 
 export default function Home() {
   const { userId } = auth();
   if (userId) {
-    // redirect("/profile");
+    redirect(`/profile/${userId}`);
   }
   return (
     <div className="homecontainer">

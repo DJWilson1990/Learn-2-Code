@@ -3,10 +3,13 @@ import path from "path";
 import Input from "@/components/Input";
 import { redirect } from "next/navigation";
 import NextButton from "@/components/NextButton";
+import { setProgress } from "@/utils/utils";
+import { auth } from "@clerk/nextjs";
 
 export default async function Page({ params }) {
   console.log(params);
 
+  const { userId } = auth();
   const course = params.courseId;
   const step = params.step;
 
@@ -47,6 +50,8 @@ export default async function Page({ params }) {
   async function nextStep() {
     "use server";
     const next = Number(step) + 1;
+    await setProgress(course, next, userId);
+    console.log("setProgress", course, step, userId);
     redirect(`/course/${course}/${next}`);
   }
 

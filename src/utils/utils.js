@@ -24,7 +24,7 @@ export async function saveProfile(formData) {
 }
 
 export async function updateProfileImage(userId, imageUrl) {
-  const queryString = `UPDATE user_details SET image_link = '${imageUrl}' WHERE users.id = '${userId}'`;
+  const queryString = `UPDATE user_details SET image_link = '${imageUrl}' WHERE id = '${userId}'`;
   await sql.query(queryString);
 }
 
@@ -36,6 +36,11 @@ export async function getProfile(id) {
   } catch (error) {
     return undefined;
   }
+}
+
+export async function setProgress(course, step, userId) {
+  const queryString = `UPDATE user_details SET course = ${course}, step = ${step} WHERE id = '${userId}'`;
+  await sql.query(queryString);
 }
 
 // export async function getLanguage(id) {

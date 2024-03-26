@@ -6,12 +6,6 @@ import "./RadixForm.css";
 import { updateProfile } from "@/utils/actions";
 
 export default function ProfileForm({ user_id, email, new_profile }) {
-  // async function submitForm(event) {
-  //   event.preventDefault();
-  //   const formData = new FormData(event.target);
-  //   action(formData);
-  // }
-
   console.log(user_id, email, new_profile);
   return (
     <Form.Root className="FormRoot mx-auto" action={updateProfile}>
@@ -69,21 +63,6 @@ export default function ProfileForm({ user_id, email, new_profile }) {
           <input className="Input" type="text" required />
         </Form.Control>
       </Form.Field>
-
-      {/* <Form.Field className="FormField" name="language">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">Language</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field> */}
 
       <label for="language">Choose a language:</label>
       <select name="language" id="language">

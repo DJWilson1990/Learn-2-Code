@@ -1,8 +1,17 @@
 import { getProfile } from "@/utils/utils";
 import Image from "next/image";
 import React from "react";
+import NextButton from "./NextButton";
+import { redirect } from "next/navigation";
 
 export default async function ViewProfile({ profile }) {
+  console.log(profile.step);
+
+  async function resume() {
+    "use server";
+    redirect(`/course/${profile.course}/${profile.step}`);
+  }
+
   return (
     <div className="flex items-center flex-col mt-10">
       <Image
@@ -16,6 +25,8 @@ export default async function ViewProfile({ profile }) {
       <p className="m-2">{profile.first_name}</p>
       <p className="m-2">{profile.last_name}</p>
       <p className="m-2">{profile.user_name}</p>
+
+      <NextButton action={resume} caption="Resume Learning"></NextButton>
     </div>
   );
 }
