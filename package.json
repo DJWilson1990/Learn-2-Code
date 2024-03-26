@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.9",
+    "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-form": "^0.0.3",
     "@vercel/postgres": "^0.7.2",
     "codemirror": "^5.65.16",

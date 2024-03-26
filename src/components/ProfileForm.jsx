@@ -6,11 +6,11 @@ import "./RadixForm.css";
 import { updateProfile } from "@/utils/actions";
 
 export default function ProfileForm({ action, user_id, email, new_profile }) {
-  async function submitForm(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    action(formData);
-  }
+  // async function submitForm(event) {
+  //   event.preventDefault();
+  //   const formData = new FormData(event.target);
+  //   action(formData);
+  // }
 
   console.log(user_id, email, new_profile);
   return (
@@ -18,6 +18,22 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
       <input type="hidden" name="user_id" value={user_id} />
       <input type="hidden" name="email" value={email} />
       <input type="hidden" name="new_profile" value={true} />
+
+      <Form.Field className="FormField" name="username">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "baseline",
+            justifyContent: "space-between",
+          }}
+        >
+          <Form.Label className="FormLabel">Username</Form.Label>
+        </div>
+        <Form.Control asChild>
+          <input className="Input" type="text" />
+        </Form.Control>
+      </Form.Field>
+
       <Form.Field className="FormField" name="first_name">
         <div
           style={{
@@ -54,7 +70,7 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
         </Form.Control>
       </Form.Field>
 
-      <Form.Field className="FormField" name="gender">
+      {/* <Form.Field className="FormField" name="language">
         <div
           style={{
             display: "flex",
@@ -62,60 +78,20 @@ export default function ProfileForm({ action, user_id, email, new_profile }) {
             justifyContent: "space-between",
           }}
         >
-          <Form.Label className="FormLabel">Gender</Form.Label>
+          <Form.Label className="FormLabel">Language</Form.Label>
         </div>
         <Form.Control asChild>
           <input className="Input" type="text" />
         </Form.Control>
-      </Form.Field>
+      </Form.Field> */}
 
-      <Form.Field className="FormField" name="location">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">Location</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field>
-
-      <Form.Field className="FormField" name="occupation">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">Occupation</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <input className="Input" type="text" />
-        </Form.Control>
-      </Form.Field>
-
-      <Form.Field className="FormField" name="about">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
-          <Form.Label className="FormLabel">About</Form.Label>
-          <Form.Message className="FormMessage" match="valueMissing">
-            About you...
-          </Form.Message>
-        </div>
-        <Form.Control asChild>
-          <textarea className="Textarea" />
-        </Form.Control>
-      </Form.Field>
+      <label for="language">Choose a language:</label>
+      <select name="language" id="language">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Italian">Italian</option>
+      </select>
 
       <Form.Submit asChild>
         <button className="Button" style={{ marginTop: 10 }}>
