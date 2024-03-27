@@ -43,6 +43,6 @@
     "step": 4,
     "title": "Headers, sub headings and paragraphs combined",
     "subject": "h1, h2 and p tags",
-    "content": "Woah That is some quick progress! \nLet's combine what we have learnt so far and put it all together. \nFor this task I want you to make a title using <h1> tags, a sub heading using <h> tags and a short description using <p> tags. All on the same page! \nAgain, do not forget the closing tags!\ne.g <h1> Hello World! </h1><h3>What a wonderful world</h3> <p>This is a page about how wonderful the world is!</p>"
-  }
+    "content": "Woah That is some quick progress! \nLet's combine what we have learnt so far and put it all together. \nFor this task I want you to make a title using <h1> tags, a sub heading using <h> tags and a short description using <p> tags. All on the same page! \nAgain, do not forget the closing tags!\ne.g <h1> Hello World!</h1>\n<h3>What a wonderful world</h3>\n<p>This is a page about how wonderful the world is!</p>"
+    }
 ]

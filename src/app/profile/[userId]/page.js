@@ -23,7 +23,6 @@ export default async function Page({ params }) {
   }
   return (
     <div>
-      <UserButton />
       <ViewProfile profile={userProfile} />
     </div>
   );

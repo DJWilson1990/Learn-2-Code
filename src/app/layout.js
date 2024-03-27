@@ -3,6 +3,7 @@ import "./globals.css";
  
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import Navbar from "@/components/NavBar";
 
 const inter = Comfortaa({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <nav>
+          {/* <nav>
            <Link className="a" href="/">Home</Link> 
 
            <Link className="b" href="/about-us">About-Us</Link>
@@ -26,8 +27,8 @@ export default function RootLayout({ children }) {
            <Link className="e" href="/sign-up">sign-up</Link>
 
           
-          </nav>
-           
+          </nav> */}
+           <Navbar />
         
           
           
