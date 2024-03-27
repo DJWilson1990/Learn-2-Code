@@ -3,12 +3,15 @@ import path from "path";
 import Input from "@/components/Input";
 import { redirect } from "next/navigation";
 import Button from "@/components/Button";
-import { setProgress } from "@/utils/utils";
+import { getProfile, setProgress } from "@/utils/utils";
 import { auth } from "@clerk/nextjs";
 import "./course.css";
+import Render from "@/components/Render";
 
 export default async function Page({ params }) {
   const { userId } = auth();
+  const userProfile = await getProfile(userId);
+  // console.log(userProfile);
   const course = params.courseId;
   const step = params.step;
 
@@ -34,7 +37,7 @@ export default async function Page({ params }) {
     };
   }
 
-  console.log(lesson);
+  // console.log(lesson);
 
   async function getCourseData(fileName) {
     const filePath = path.join(process.cwd(), fileName);
@@ -52,7 +55,7 @@ export default async function Page({ params }) {
     "use server";
     const next = Number(step) + 1;
     await setProgress(course, next, userId);
-    console.log("setProgress", course, step, userId);
+    // console.log("setProgress", course, step, userId);
     redirect(`/course/${course}/${next}`);
   }
 
@@ -68,9 +71,12 @@ export default async function Page({ params }) {
 
   return (
     <div className="flex flex-col mx-auto my-10">
+      <h3 className="m-2 font-bold text-xl">
+        <Render text={lesson.title} language={userProfile.language} />
+      </h3>
       {lessonContent.map((text) => (
         <p key={text} className="mb-2">
-          {text}
+          <Render text={text} language={userProfile.language} />
         </p>
       ))}
 

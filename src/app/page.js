@@ -2,8 +2,8 @@ import Image from "next/image";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-import Link from "next/link"
- 
+import Link from "next/link";
+
 export default function Home() {
   const { userId } = auth();
   if (userId) {
@@ -11,7 +11,6 @@ export default function Home() {
   }
   return (
     <div className="homecontainer">
-        
       <div>
         <div className="header">
           <img
@@ -40,9 +39,6 @@ export default function Home() {
               today and unlock the doors to endless possibilities in the world
               of technology!
             </h2>
-          </div>
-          <div className="flex-items">
-            <h2>Log In or Sign Up buttons</h2>
           </div>
         </div>
       </div>
