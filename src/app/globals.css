@@ -141,8 +141,6 @@ flex-container-home {
 /* styling for course output */
 textarea {
   width: 90%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 #output {
@@ -184,34 +182,33 @@ textarea {
 .a {
   margin-left: 50px;
 }
-.a:hover{
-   color:white;
+.a:hover {
+  color: white;
 }
 .b {
   margin-left: 50px;
-  
 }
-.b:hover{
-  color:white;
+.b:hover {
+  color: white;
 }
 .c {
   margin-left: 50px;
 }
-.c:hover{
-  color:white;
+.c:hover {
+  color: white;
 }
 .d {
   margin-left: 50px;
 }
-.d:hover{
-  color:white;
+.d:hover {
+  color: white;
 }
 
 .e {
   margin-left: 50px;
 }
-.e:hover{
-  color:white;
+.e:hover {
+  color: white;
 }
 
 /*  */
