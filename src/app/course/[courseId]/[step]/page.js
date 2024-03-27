@@ -42,7 +42,7 @@ export default async function Page({ params }) {
   // console.log(lesson);
 
   async function getCourseData(fileName) {
-    const filePath = path.join(process.cwd(), fileName);
+    const filePath = path.join(process.cwd(), "public", fileName);
     try {
       const fileContent = await fsPromises.readFile(filePath, "utf-8");
       const data = await JSON.parse(fileContent);
