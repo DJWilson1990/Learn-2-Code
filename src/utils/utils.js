@@ -14,7 +14,7 @@ export async function saveProfile(formData) {
   if (newProfile === "true") {
     queryString = `INSERT INTO user_details (id, user_name, first_name, last_name, email, language) VALUES ('${id}', '${userName}', '${firstName}', '${lastName}', '${email}', '${language}')`;
   } else {
-    queryString = `UPDATE user_details SET first_name = '${firstName}', last_name = '${lastName}', email = '${email}', language = '${language}' WHERE id = '${id}'`;
+    queryString = `UPDATE user_details SET user_name = '${userName}', first_name = '${firstName}', last_name = '${lastName}', email = '${email}', language = '${language}' WHERE id = '${id}'`;
   }
   try {
     const result = await sql.query(queryString);
@@ -24,7 +24,7 @@ export async function saveProfile(formData) {
 }
 
 export async function updateProfileImage(userId, imageUrl) {
-  const queryString = `UPDATE user_details SET image_link = '${imageUrl}' WHERE users.id = '${userId}'`;
+  const queryString = `UPDATE user_details SET image_link = '${imageUrl}' WHERE id = '${userId}'`;
   await sql.query(queryString);
 }
 
@@ -38,11 +38,18 @@ export async function getProfile(id) {
   }
 }
 
-// export async function getLanguage(id) {
-//   try {
-//     const language = (await sql`SELECT language_code WHERE id = ${id}`).rows[0];
-//     return language;
-//   } catch (error) {
-//     return undefined;
-//   }
-// }
+export async function setProgress(course, step, userId) {
+  const queryString = `UPDATE user_details SET course = ${course}, step = ${step} WHERE id = '${userId}'`;
+  await sql.query(queryString);
+}
+
+export async function getLanguages() {
+  try {
+    const language = (
+      await sql`SELECT language_name, language_code FROM language`
+    ).rows;
+    return language;
+  } catch (error) {
+    return undefined;
+  }
+}

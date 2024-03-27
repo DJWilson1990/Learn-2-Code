@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
+import { Comfortaa } from "next/font/google";
 import "./globals.css";
 
 import { ClerkProvider, UserButton } from "@clerk/nextjs";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Comfortaa({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",

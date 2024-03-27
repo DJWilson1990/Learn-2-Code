@@ -3,7 +3,7 @@
     "step": 0,
     "title": "Lesson intro",
     "subject": "HTML intro",
-    "content": "Welcome to Learn 2 Code.\n Here you will be able to start your programming career with the basics and progress to a fully-fledged web developer. To start our journey, we are going to look at HTML. We will look at HTML elements, how they are used and how a typical HTML page is structured. HTML (HyperText Markup Language) tells web browsers how to structure the web pages you visit. It consists of elements which are used to enclose, wrap or mark up different parts of content, making it appear in a certain way. Ok, so let’s start building a basic page.",
+    "content": "Welcome to Learn 2 Code.\n Here you will be able to start your programming career with the basics and progress to a fully-fledged web developer.\n To start our journey, we are going to look at HTML.\nWe will look at HTML elements, how they are used and how a typical HTML page is structured.\nHTML (HyperText Markup Language) tells web browsers how to structure the web pages you visit. It consists of elements which are used to enclose, wrap or mark up different parts of content, making it appear in a certain way.\n Ok, so let’s start building a basic page.",
     "userInteraction": false
   },
   {
