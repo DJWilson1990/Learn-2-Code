@@ -10,9 +10,11 @@ export async function saveProfile(formData) {
   const lastName = formData.get("last_name");
   const email = formData.get("email");
   const language = formData.get("language");
+  const course = formData.get("course");
+  const step = formData.get("step");
   let queryString = "";
   if (newProfile === "true") {
-    queryString = `INSERT INTO user_details (id, user_name, first_name, last_name, email, language) VALUES ('${id}', '${userName}', '${firstName}', '${lastName}', '${email}', '${language}')`;
+    queryString = `INSERT INTO user_details (id, user_name, first_name, last_name, email, language, course, step) VALUES ('${id}', '${userName}', '${firstName}', '${lastName}', '${email}', '${language}', ${course}, ${step})`;
   } else {
     queryString = `UPDATE user_details SET user_name = '${userName}', first_name = '${firstName}', last_name = '${lastName}', email = '${email}', language = '${language}' WHERE id = '${id}'`;
   }

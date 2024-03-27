@@ -6,13 +6,13 @@ export default function Button({ caption, action }) {
   }
 
   return (
-    <div>
+    <>
       <button
-        className="border rounded-md w-36 m-4 p-2 bg-yellow-500"
+        className="border rounded-md w-36 p-2 bg-yellow-500"
         onClick={handleClick}
       >
         {caption}
       </button>
-    </div>
+    </>
   );
 }

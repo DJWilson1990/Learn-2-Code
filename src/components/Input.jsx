@@ -51,14 +51,14 @@ export default function Input({ element, resetInput }) {
   }
 
   return (
-    <div>
+    <div className="mx-auto">
       <textarea
         placeholder="Your code goes here"
         onChange={handleChange}
         value={userInput}
         className={`${
           validInput === true ? "text-green-600" : "text-red-600"
-        } border m-2`}
+        } border m-2 mx-auto`}
         e
       ></textarea>
     </div>

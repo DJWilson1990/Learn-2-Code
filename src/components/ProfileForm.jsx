@@ -21,8 +21,8 @@ export default function ProfileForm({
       <input type="hidden" name="new_profile" value={true} />
 
       {/* testing a fix for bug */}
-      {/* <input type="hidden" name="course" value={} />
-      <input type="hidden" name="step" value={1} /> */}
+      <input type="hidden" name="course" value={1} />
+      <input type="hidden" name="step" value={1} />
 
       <Form.Field className="FormField" name="user_name">
         <div

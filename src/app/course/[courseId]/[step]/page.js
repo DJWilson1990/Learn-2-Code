@@ -67,7 +67,7 @@ export default async function Page({ params }) {
   // }
 
   return (
-    <div className="flex flex-col mx-auto m-10">
+    <div className="flex flex-col mx-auto my-10">
       {lessonContent.map((text) => (
         <p key={text} className="mb-2">
           {text}
@@ -80,16 +80,17 @@ export default async function Page({ params }) {
       {lesson.userInteraction === true ? (
         <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
       ) : null}
-
-      {step < numberOfSteps ? (
-        <Button action={nextStep} caption="Next Step" className="mx-auto" />
-      ) : (
-        <Button
-          action={playground}
-          caption="Go to code playground"
-          className="mx-auto"
-        />
-      )}
+      <div className="mx-auto mt-10">
+        {step < numberOfSteps ? (
+          <Button action={nextStep} caption="Next Step" className="mx-auto" />
+        ) : (
+          <Button
+            action={playground}
+            caption="Go to code playground"
+            className="mx-auto"
+          />
+        )}
+      </div>
       {/* <Button acttion={nextCourse} caption="Continue to the next course" /> */}
     </div>
   );
