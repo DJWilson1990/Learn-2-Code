@@ -14,6 +14,7 @@ export default async function Page() {
   let emailAddress;
 
   const { userId } = auth();
+  console.log(auth);
   console.log(userId);
 
   const languages = await getLanguages();

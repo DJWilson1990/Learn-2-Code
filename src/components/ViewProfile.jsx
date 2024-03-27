@@ -5,8 +5,6 @@ import Button from "./Button";
 import { redirect } from "next/navigation";
 
 export default async function ViewProfile({ profile }) {
-  console.log(profile.step);
-
   async function resume() {
     "use server";
     redirect(`/course/${profile.course}/${profile.step}`);

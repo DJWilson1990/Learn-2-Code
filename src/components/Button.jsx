@@ -1,6 +1,6 @@
 "use client";
 
-export default function NextButton({ caption, action }) {
+export default function Button({ caption, action }) {
   async function handleClick(event) {
     action();
   }
