@@ -138,7 +138,18 @@ flex-container-home {
   background-color: #227e7e;
 }
 
-/* sstyling for course output */
+/* styling for course output */
+textarea {
+  width: 90%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#output {
+  width: 80%;
+  margin: auto;
+}
+
 #output h1 {
   font-size: 5rem;
   font-weight: 500;
@@ -165,6 +176,9 @@ flex-container-home {
 }
 #output p {
   font-size: 1rem;
+}
+.CodeMirror {
+  height: 100% !important;
 }
 
 .a {

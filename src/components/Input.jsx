@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import "../app/globals.css";
+import "../app/course/[courseId]/[step]/course.css";
 
 export default function Input({ element, resetInput }) {
   const [userInput, setUserInput] = useState("");
@@ -17,7 +18,7 @@ export default function Input({ element, resetInput }) {
     const openingTagLength = element.opening_tag.length;
     const closingTagLength = element.closing_tag.length;
     const minLength = openingTagLength + closingTagLength;
-    // trim - trims of space or whitespace from each end of string
+    // trim - trims off space or whitespace from each end of string
     const input = userInput.trim();
     // input length needs to be atleast the length of opening and closing tags combined
     if (input.length < minLength) {
@@ -52,11 +53,12 @@ export default function Input({ element, resetInput }) {
   return (
     <div>
       <textarea
+        placeholder="Your code goes here"
         onChange={handleChange}
         value={userInput}
         className={`${
           validInput === true ? "text-green-600" : "text-red-600"
-        } border w-96 m-2`}
+        } border m-2`}
         e
       ></textarea>
     </div>
