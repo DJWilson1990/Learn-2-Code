@@ -20,6 +20,10 @@ export default function ProfileForm({
       <input type="hidden" name="email" value={email} />
       <input type="hidden" name="new_profile" value={true} />
 
+      {/* testing a fix for bug */}
+      {/* <input type="hidden" name="course" value={} />
+      <input type="hidden" name="step" value={1} /> */}
+
       <Form.Field className="FormField" name="user_name">
         <div
           style={{
@@ -79,14 +83,6 @@ export default function ProfileForm({
           </option>
         ))}
       </select>
-
-      {/* <label htmlFor="language">Choose a language: </label>
-      <select name="language" id="language">
-        <option value="English">English</option>
-        <option value="French">French</option>
-        <option value="Spanish">Spanish</option>
-        <option value="Italian">Italian</option>
-      </select> */}
 
       <Form.Submit asChild>
         <button className="Button" style={{ marginTop: 10 }}>

@@ -25,7 +25,6 @@ export default async function Page({ params }) {
     <div>
       <UserButton />
       <ViewProfile profile={userProfile} />
-      <p>users home profile page will be here.</p>
     </div>
   );
 }
