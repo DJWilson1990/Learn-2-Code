@@ -19,9 +19,11 @@ export default async function Page({ params }) {
   const courseFileName =
     courseIdAsString.substring(courseIdAsString.length - 2) + ".json";
 
-  const courseData = await getCourseData(
-    `/src/resources/courses/${courseFileName}`
-  );
+  // const courseData = await getCourseData(
+  //   `/src/resources/courses/${courseFileName}`
+  // );
+
+  const courseData = await getCourseData(`/${courseFileName}`);
 
   const numberOfSteps = courseData.length;
   const lesson = courseData[step - 1];
