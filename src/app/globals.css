@@ -166,5 +166,8 @@ flex-container-home {
 #output p {
   font-size: 1rem;
 }
+.CodeMirror {
+  height: 100% !important;
+}
 
 /*  */
