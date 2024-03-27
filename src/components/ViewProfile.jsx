@@ -31,7 +31,7 @@ export default async function ViewProfile({ profile }) {
         {profile.first_name} {profile.last_name}
       </p>
       <p className="m-2">{profile.email}</p>
-      <div className="flex">
+      <div className="flex m-4">
         <Button action={resume} caption="Resume Learning" />
         <Button action={playground} caption="Go to code playground" />
       </div>

@@ -3,6 +3,7 @@ import { getProfile } from "@/utils/utils";
 // import { notFound } from "next/navigation";
 import { UserButton, auth } from "@clerk/nextjs";
 import ViewProfile from "@/components/ViewProfile";
+import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "User profile page",
@@ -13,6 +14,9 @@ export default async function Page({ params }) {
   const { userId } = auth();
   const clerkProfile = auth();
   const userProfile = await getProfile(userId);
+  if (!userProfile) {
+    redirect("/profile");
+  }
 
   console.log(userId);
   console.log("clerkProfile" + clerkProfile);
