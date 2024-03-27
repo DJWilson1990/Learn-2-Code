@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import Button from "@/components/Button";
 import { setProgress } from "@/utils/utils";
 import { auth } from "@clerk/nextjs";
+import "./course.css";
 
 export default async function Page({ params }) {
   const { userId } = auth();
@@ -60,28 +61,34 @@ export default async function Page({ params }) {
     redirect("/code-editor");
   }
 
+  // async function nextCourse() {
+  //   "use server";
+  //   redirect("/notfound");
+  // }
+
   return (
-    <div className="flex flex-col mx-auto w-96 m-10">
-      {/* <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p> */}
+    <div className="flex flex-col mx-auto m-10">
       {lessonContent.map((text) => (
         <p key={text} className="mb-2">
           {text}
         </p>
       ))}
-      {/* <p className="text-center">{lesson.content}</p> */}
+
       {lesson.userInteraction === true ? <Input element={element} /> : null}
       {lesson.userInteraction === true ? (
         <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
       ) : null}
 
-      {/* {step < numberOfSteps ? (
-        <Button action={nextStep} caption="Next Step" />
-      ) : null} */}
       {step < numberOfSteps ? (
-        <Button action={nextStep} caption="Next Step" />
+        <Button action={nextStep} caption="Next Step" className="mx-auto" />
       ) : (
-        <Button action={playground} caption="Go to code playground" />
+        <Button
+          action={playground}
+          caption="Go to code playground"
+          className="mx-auto"
+        />
       )}
+      {/* <Button acttion={nextCourse} caption="Continue to the next course" /> */}
     </div>
   );
 }

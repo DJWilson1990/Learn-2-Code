@@ -10,6 +10,11 @@ export default async function ViewProfile({ profile }) {
     redirect(`/course/${profile.course}/${profile.step}`);
   }
 
+  async function playground() {
+    "use server";
+    redirect("/code-editor");
+  }
+
   return (
     <div className="flex items-center flex-col mt-10">
       <Image
@@ -20,11 +25,16 @@ export default async function ViewProfile({ profile }) {
         height={100}
         className="rounded-full m-2"
       />
-      <p className="m-2">{profile.first_name}</p>
-      <p className="m-2">{profile.last_name}</p>
-      <p className="m-2">{profile.user_name}</p>
 
-      <Button action={resume} caption="Resume Learning"></Button>
+      <p className="m-2">{profile.user_name}</p>
+      <p className="m-2">
+        {profile.first_name} {profile.last_name}
+      </p>
+      <p className="m-2">{profile.email}</p>
+      <div className="flex">
+        <Button action={resume} caption="Resume Learning" />
+        <Button action={playground} caption="Go to code playground" />
+      </div>
     </div>
   );
 }
