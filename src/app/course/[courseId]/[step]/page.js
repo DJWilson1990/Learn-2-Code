@@ -2,7 +2,7 @@ import fsPromises from "fs/promises";
 import path from "path";
 import Input from "@/components/Input";
 import { redirect } from "next/navigation";
-import NextButton from "@/components/NextButton";
+import Button from "@/components/Button";
 import { setProgress } from "@/utils/utils";
 import { auth } from "@clerk/nextjs";
 
@@ -75,12 +75,12 @@ export default async function Page({ params }) {
       ) : null}
 
       {/* {step < numberOfSteps ? (
-        <NextButton action={nextStep} caption="Next Step" />
+        <Button action={nextStep} caption="Next Step" />
       ) : null} */}
       {step < numberOfSteps ? (
-        <NextButton action={nextStep} caption="Next Step" />
+        <Button action={nextStep} caption="Next Step" />
       ) : (
-        <NextButton action={playground} caption="Go to code playground" />
+        <Button action={playground} caption="Go to code playground" />
       )}
     </div>
   );

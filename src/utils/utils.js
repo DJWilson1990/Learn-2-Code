@@ -43,11 +43,13 @@ export async function setProgress(course, step, userId) {
   await sql.query(queryString);
 }
 
-// export async function getLanguage(id) {
-//   try {
-//     const language = (await sql`SELECT language_code WHERE id = ${id}`).rows[0];
-//     return language;
-//   } catch (error) {
-//     return undefined;
-//   }
-// }
+export async function getLanguages() {
+  try {
+    const language = (
+      await sql`SELECT language_name, language_code FROM language`
+    ).rows;
+    return language;
+  } catch (error) {
+    return undefined;
+  }
+}

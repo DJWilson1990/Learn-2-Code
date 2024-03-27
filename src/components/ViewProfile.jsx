@@ -1,7 +1,7 @@
 import { getProfile } from "@/utils/utils";
 import Image from "next/image";
 import React from "react";
-import NextButton from "./NextButton";
+import Button from "./Button";
 import { redirect } from "next/navigation";
 
 export default async function ViewProfile({ profile }) {
@@ -26,7 +26,7 @@ export default async function ViewProfile({ profile }) {
       <p className="m-2">{profile.last_name}</p>
       <p className="m-2">{profile.user_name}</p>
 
-      <NextButton action={resume} caption="Resume Learning"></NextButton>
+      <Button action={resume} caption="Resume Learning"></Button>
     </div>
   );
 }

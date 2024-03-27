@@ -5,8 +5,15 @@ import * as Form from "@radix-ui/react-form";
 import "./RadixForm.css";
 import { updateProfile } from "@/utils/actions";
 
-export default function ProfileForm({ user_id, email, new_profile }) {
+export default function ProfileForm({
+  user_id,
+  email,
+  new_profile,
+  languages,
+}) {
   console.log(user_id, email, new_profile);
+  console.log(languages);
+
   return (
     <Form.Root className="FormRoot mx-auto" action={updateProfile}>
       <input type="hidden" name="user_id" value={user_id} />
@@ -64,13 +71,22 @@ export default function ProfileForm({ user_id, email, new_profile }) {
         </Form.Control>
       </Form.Field>
 
-      <label for="language">Choose a language:</label>
+      <label htmlFor="language">Choose a language: </label>
+      <select name="language" id="language">
+        {languages.map((language) => (
+          <option key={language.language_code} value={language.language_code}>
+            {language.language_name}
+          </option>
+        ))}
+      </select>
+
+      {/* <label htmlFor="language">Choose a language: </label>
       <select name="language" id="language">
         <option value="English">English</option>
         <option value="French">French</option>
         <option value="Spanish">Spanish</option>
         <option value="Italian">Italian</option>
-      </select>
+      </select> */}
 
       <Form.Submit asChild>
         <button className="Button" style={{ marginTop: 10 }}>
