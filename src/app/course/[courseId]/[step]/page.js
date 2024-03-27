@@ -74,7 +74,9 @@ export default async function Page({ params }) {
         </p>
       ))}
 
-      {lesson.userInteraction === true ? <Input element={element} /> : null}
+      {lesson.userInteraction === true ? (
+        <Input element={element} className="mx-auto" />
+      ) : null}
       {lesson.userInteraction === true ? (
         <div id="output" className="border w-96 h-40 mx-auto text-wrap"></div>
       ) : null}
