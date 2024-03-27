@@ -26,7 +26,7 @@ export default function Home() {
             <h2>
               Welcome to Learn2Code! Our website is designed with simplicity in
               mind to make learning to code easy and enjoyable for beginners.
-              Whether you're completely new to coding or looking to brush up on
+              Whether you are completely new to coding or looking to brush up on
               your skills, Learn2Code offers a user-friendly platform packed
               with interactive tutorials, step-by-step guides, and hands-on
               exercises.
@@ -35,7 +35,7 @@ export default function Home() {
               Our carefully curated coding exercises cover programming languages
               such as HTML, and CSS, making it accessible for anyone eager to
               dive into the world of coding. With clear explanations and
-              practical examples, you'll quickly grasp the fundamentals and
+              practical examples, you will quickly grasp the fundamentals and
               build a solid foundation for your coding journey. Get started
               today and unlock the doors to endless possibilities in the world
               of technology!
