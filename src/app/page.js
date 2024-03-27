@@ -11,8 +11,6 @@ export default function Home() {
   }
   return (
     <div className="homecontainer">
-      <SignInButton />
-      <UserButton />
         
       <div>
         <div className="header">
