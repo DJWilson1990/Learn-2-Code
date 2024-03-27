@@ -167,4 +167,37 @@ flex-container-home {
   font-size: 1rem;
 }
 
+.a {
+  margin-left: 50px;
+}
+.a:hover{
+   color:white;
+}
+.b {
+  margin-left: 50px;
+  
+}
+.b:hover{
+  color:white;
+}
+.c {
+  margin-left: 50px;
+}
+.c:hover{
+  color:white;
+}
+.d {
+  margin-left: 50px;
+}
+.d:hover{
+  color:white;
+}
+
+.e {
+  margin-left: 50px;
+}
+.e:hover{
+  color:white;
+}
+
 /*  */
