@@ -11,11 +11,13 @@ import Render from "@/components/Render";
 export default async function Page({ params }) {
   const { userId } = auth();
   const userProfile = await getProfile(userId);
-  // console.log(userProfile);
+
   const course = params.courseId;
   const step = params.step;
 
+  // setting course id
   const courseIdAsString = "00" + course;
+  // for url purposes
   const courseFileName =
     courseIdAsString.substring(courseIdAsString.length - 2) + ".json";
 
@@ -26,9 +28,12 @@ export default async function Page({ params }) {
   const courseData = await getCourseData(`${courseFileName}`);
 
   const numberOfSteps = courseData.length;
+  // to stop course starting at second step instead of first
   const lesson = courseData[step - 1];
+  //splitting the json for styling. creating line break
   const lessonContent = lesson.content.split("\n");
 
+  // element details
   let element;
   if (lesson.userInteraction === true) {
     element = {
@@ -40,7 +45,7 @@ export default async function Page({ params }) {
   }
 
   // console.log(lesson);
-
+  //  getting course data from json file
   async function getCourseData(fileName) {
     const filePath = path.join(process.cwd(), "public", fileName);
     try {
@@ -57,7 +62,6 @@ export default async function Page({ params }) {
     "use server";
     const next = Number(step) + 1;
     await setProgress(course, next, userId);
-    // console.log("setProgress", course, step, userId);
     redirect(`/course/${course}/${next}`);
   }
 
@@ -65,11 +69,6 @@ export default async function Page({ params }) {
     "use server";
     redirect("/code-editor");
   }
-
-  // async function nextCourse() {
-  //   "use server";
-  //   redirect("/notfound");
-  // }
 
   return (
     <div className="flex flex-col mx-auto my-10">
@@ -99,7 +98,6 @@ export default async function Page({ params }) {
           />
         )}
       </div>
-      {/* <Button acttion={nextCourse} caption="Continue to the next course" /> */}
     </div>
   );
 }
